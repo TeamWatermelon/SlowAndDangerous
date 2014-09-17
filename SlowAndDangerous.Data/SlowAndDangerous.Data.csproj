@@ -54,7 +54,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ISlowAndDangerousData.cs" />
+    <Compile Include="ISlowAndDangerousDbContext.cs" />
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Repositories\IRepository.cs" />
+    <Compile Include="Repositories\Repository.cs" />
+    <Compile Include="SlowAndDangerousData.cs" />
     <Compile Include="SlowAndDangerousDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
