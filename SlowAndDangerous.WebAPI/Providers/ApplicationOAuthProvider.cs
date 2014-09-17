@@ -10,6 +10,7 @@ using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.OAuth;
 using SlowAndDangerous.WebAPI.Models;
+using SlowAndDangerous.Models;
 
 namespace SlowAndDangerous.WebAPI.Providers
 {
@@ -31,7 +32,7 @@ namespace SlowAndDangerous.WebAPI.Providers
         {
             var userManager = context.OwinContext.GetUserManager<ApplicationUserManager>();
 
-            ApplicationUser user = await userManager.FindAsync(context.UserName, context.Password);
+            User user = await userManager.FindAsync(context.UserName, context.Password);
 
             if (user == null)
             {

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SlowAndDangerous.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -7,12 +8,13 @@ using System.Web.Http;
 
 namespace SlowAndDangerous.WebAPI.Controllers
 {
-    [Authorize]
     public class ValuesController : ApiController
     {
         // GET api/values
         public IEnumerable<string> Get()
         {
+            var db = new SlowAndDangerousDbContext();
+            db.Cars.Any();
             return new string[] { "value1", "value2" };
         }
 
