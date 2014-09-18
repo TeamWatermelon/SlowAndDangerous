@@ -7,6 +7,8 @@
 
     public interface ISlowAndDangerousDbContext
     {
+        IDbSet<Appointment> Appointments { get; set; }
+
         IDbSet<Car> Cars { get; set; }
 
         IDbSet<City> Cities { get; set; }

@@ -14,6 +14,8 @@
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<SlowAndDangerousDbContext, Configuration>());
         }
 
+        public IDbSet<Appointment> Appointments { get; set; }
+
         public IDbSet<Car> Cars { get; set; }
 
         public IDbSet<City> Cities { get; set; }

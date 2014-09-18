@@ -5,6 +5,8 @@
     
    public interface ISlowAndDangerousData
     {
+       IRepository<Appointment> Appointments { get; }
+
         IRepository<Car> Cars { get; }
 
         IRepository<City> Cities { get; }
