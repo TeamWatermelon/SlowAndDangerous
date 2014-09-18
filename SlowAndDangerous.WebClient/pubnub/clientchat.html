@@ -10,7 +10,7 @@
     <div class="jumbotron pubnubbox">
         <h2 class="marginfix">"Slow And Dangerous" Client Chat</h2>
         <div><input id="input" class="form-control marginfix" placeholder="Enter your message here"></div>
-        <code class="btn btn-primary marginfix">Send Message</code>
+        <code>Hit Enter to Send</code>
         <div id="box"></div>
         <div id="pubnub" pub-key="demo" sub-key="demo"></div>
     </div>
@@ -31,7 +31,7 @@
             //    '<br>' +
             //    box.innerHTML;
             var newItem = document.createElement('div');
-            newItem.className = 'panel-heading';
+            newItem.className = 'panel-heading clienttext';
 
             var newItemH3 = document.createElement('h3');
             newItemH3.className = 'panel-title';
@@ -55,6 +55,9 @@
             x: (input.value = '')
         });
     });
-})();</script>
+})();
+
+
+    </script>
 </body>
 </html>
