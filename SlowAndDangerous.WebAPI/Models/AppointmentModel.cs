@@ -27,16 +27,19 @@ namespace SlowAndDangerous.WebAPI.Models
         }
         public int Id { get; set; }
 
-        [Required]
         public Status Status { get; set; }
 
         [Required]
         public DateTime Date { get; set; }
 
+        [Required]
         public string City { get; set; }
 
+        [Required]
         public string Instructor { get; set; }
 
         public string Student { get; set; }
+
+        public string CarNumber { get; set; }
     }
 }
