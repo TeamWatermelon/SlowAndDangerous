@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../css/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="css/pubnub.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="jumbotron pubnubbox">
+        <h2 class="marginfix">"Slow And Dangerous" Client Chat</h2>
+        <div><input id="input" class="form-control marginfix" placeholder="Enter your message here"></div>
+        <code class="btn btn-primary marginfix">Send Message</code>
+        <div id="box"></div>
+        <div id="pubnub" pub-key="demo" sub-key="demo"></div>
+    </div>
+    <script src="scripts/pubnub.min.js"></script>
+    <script src="sound.js"></script>
+    <script>
+(function () {
+    var box = PUBNUB.$('box'), input = PUBNUB.$('input'), channel = 'chatlllll';
+    PUBNUB.subscribe({
+        channel: channel,
+        callback: function (text) {
+            // PLAY SOUND HERE
+            sounds.play('chat');
+
+            // UPDATE TEXT OUTPUT HERE
+            //box.innerHTML =
+            //    ('' + text).replace(/[<>]/g, '') +
+            //    '<br>' +
+            //    box.innerHTML;
+            var newItem = document.createElement('div');
+            newItem.className = 'panel-heading';
+
+            var newItemH3 = document.createElement('h3');
+            newItemH3.className = 'panel-title';
+            newItemH3.innerHTML = ('' + text).replace(/[<>]/g, '');
+
+            newItem.appendChild(newItemH3);
+            box.appendChild(newItem);
+
+//            <div class="panel-heading">
+//<h3 class="panel-title">Panel success</h3>
+//</div>
+
+
+        }
+    });
+    PUBNUB.bind('keyup', input, function (e) {
+
+        (e.keyCode || e.charCode) === 13 && PUBNUB.publish({
+            channel: channel,
+            message: input.value,
+            x: (input.value = '')
+        });
+    });
+})();</script>
+</body>
+</html>

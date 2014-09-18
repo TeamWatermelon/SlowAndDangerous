@@ -140,7 +140,14 @@
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="packages.config" />
+    <Content Include="pubnub\chat.ogg" />
     <None Include="scripts\jquery-2.1.1.intellisense.js" />
+    <Content Include="pubnub\chat.mp3" />
+    <Content Include="pubnub\chat.wav" />
+    <Content Include="pubnub\clientchat.html" />
+    <Content Include="pubnub\css\pubnub.css" />
+    <Content Include="pubnub\scripts\pubnub.min.js" />
+    <Content Include="pubnub\sound.js" />
     <Content Include="scripts\bootstrap.min.css" />
     <Content Include="scripts\jquery-2.1.1.js" />
     <Content Include="scripts\jquery-2.1.1.min.js" />
