@@ -1,9 +1,8 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
-using Newtonsoft.Json;
-
-namespace SlowAndDangerous.WebAPI.Models
+﻿namespace SlowAndDangerous.WebAPI.Models
 {
+    using System;
+    using System.ComponentModel.DataAnnotations;
+    using Newtonsoft.Json;
     // Models used as parameters to AccountController actions.
 
     public class AddExternalLoginBindingModel
