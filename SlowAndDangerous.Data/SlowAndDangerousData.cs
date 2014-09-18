@@ -53,14 +53,6 @@
             }
         }
 
-        public IRepository<Appointment> Appointments
-        {
-            get
-            {
-                return this.GetRepository<Appointment>();
-            }
-        }
-
         public IRepository<City> Cities
         {
             get
