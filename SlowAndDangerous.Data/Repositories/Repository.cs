@@ -29,6 +29,11 @@
             this.ChangeEntityState(entity, EntityState.Added);
         }
 
+        public T Find(object id)
+        {
+            return this.set.Find(id);
+        }
+
         public void Update(T entity)
         {
             this.ChangeEntityState(entity, EntityState.Modified);
