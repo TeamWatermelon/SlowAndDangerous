@@ -23,6 +23,17 @@
         [Required]
         public string Number { get; set; }
 
-        public virtual ICollection<Appointment> Appointments { get; set; }
+        public virtual ICollection<Appointment> Appointments
+        {
+            get
+            {
+                return this.appointments;
+            }
+
+            set
+            {
+                this.appointments = value;
+            }
+        }
     }
 }
