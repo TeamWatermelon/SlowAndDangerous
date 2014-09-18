@@ -3,7 +3,7 @@
     using SlowAndDangerous.Data.Repositories;
     using SlowAndDangerous.Models;
     
-    interface ISlowAndDangerousData
+   public interface ISlowAndDangerousData
     {
         IRepository<Car> Cars { get; }
 

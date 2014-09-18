@@ -8,7 +8,8 @@
 
     public class SlowAndDangerousDbContext : IdentityDbContext<User>, ISlowAndDangerousDbContext
     {
-        public SlowAndDangerousDbContext() : base("SlowAndDangerousConnection", throwIfV1Schema: false)
+        public SlowAndDangerousDbContext()
+            : base("SlowAndDangerousConnectionSQL", throwIfV1Schema: false)
         {
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<SlowAndDangerousDbContext, Configuration>());
         }
@@ -18,8 +19,6 @@
         public IDbSet<City> Cities { get; set; }
 
         public IDbSet<Exam> Exams { get; set; }
-
-        public IDbSet<User> Users { get; set; }
 
         public static SlowAndDangerousDbContext Create()
         {
