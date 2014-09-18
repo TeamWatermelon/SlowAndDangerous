@@ -9,17 +9,17 @@
     using System.Web;
     using System.Web.Http;
 
-    public class ExamController : ApiController
+    public class ExamsController : ApiController
     {
         private ISlowAndDangerousData data;
 
-        public ExamController()
+        public ExamsController()
             : this(new SlowAndDangerousData())
         {
 
         }
 
-        public ExamController(ISlowAndDangerousData data)
+        public ExamsController(ISlowAndDangerousData data)
         {
             this.data = data;
         }
