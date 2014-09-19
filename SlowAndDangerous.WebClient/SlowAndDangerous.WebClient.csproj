@@ -137,6 +137,7 @@
     <Content Include="css\bootstrap.min.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="HomePage.html" />
+    <Content Include="imgs\appointments-logo.gif" />
     <Content Include="imgs\driving-school.jpg" />
     <Content Include="imgs\driving-student.jpg" />
     <Content Include="instructorPage.html" />
@@ -152,6 +153,7 @@
     <Content Include="libs\sha1.js" />
     <Content Include="libs\underscore.js" />
     <Content Include="login.html" />
+    <Content Include="OurAppointments.html" />
     <Content Include="packages.config" />
     <Content Include="pubnub\chat.ogg" />
     <None Include="libs\jquery-2.1.1.intellisense.js" />
