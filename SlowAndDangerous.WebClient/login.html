@@ -1,11 +1,11 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Registration page</title>
+    <title>Login page</title>
     <meta />
     <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet" />
     <script src="libs/jquery-2.1.1.js"></script>
-    <link href="css/bootstrap-theme.css" type="text/css" rel="stylesheet" />
+    <link href="libs/bootstrap-theme.css" type="text/css" rel="stylesheet" />
     <script src="js/bootstrap.min.js"></script>
 </head>
 <body>
@@ -21,8 +21,8 @@
             </div>
             <div class="navbar-collapse collapse navbar-inverse-collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="register.html">Register</a></li>
-                    <li><a href="login.html">Login</a></li>
+                    <li><a href="register.html">Register</a></li>
+                    <li class="active"><a href="login.html">Login</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">About us<b class="caret"></b></a>
                         <ul class="dropdown-menu">
@@ -36,25 +36,15 @@
                 </ul>
             </div>
         </div>
-        <div class="row">
+        <div class="text-center col-md-5">
+            <img src="imgs/driving-student.jpg" width="370" height="500" />
+        </div>
+        <div class="row col-md-7" style="margin-top: 150px">
             <form class="form-horizontal dl-horizontal col-md-8 center form">
-
                 <div class="form-group center form">
                     <label for="inputEmail" class="col-lg-4 control-label">Email</label>
                     <div class="col-lg-8">
                         <input type="text" class="form-control" id="inputEmail" placeholder="Email">
-                    </div>
-                </div>
-                <div class="form-group center form">
-                    <label for="firstname" class="col-lg-4 control-label">First name</label>
-                    <div class="col-lg-8">
-                        <input type="text" class="form-control" id="firstname" placeholder="First name">
-                    </div>
-                </div>
-                <div class="form-group center form">
-                    <label for="lastname" class="col-lg-4 control-label">Last name</label>
-                    <div class="col-lg-8">
-                        <input type="text" class="form-control" id="lastname" placeholder="Last name">
                     </div>
                 </div>
                 <div class="form-group">
@@ -64,25 +54,17 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="confirmPassword" class="col-lg-4 control-label">Confirm password</label>
-                    <div class="col-lg-8">
-                        <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password">
-                    </div>
-                </div>
-
-                <div class="form-group">
                     <div class="col-lg-8 col-lg-offset-4">
-                        <button class="btn btn-default">Cancel</button>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary">Login</button>
                     </div>
                 </div>
             </form>
         </div>
     </div>
-    <div class="regHrRow">
+    <div class="logHrRow">
         <hr class="hr" />
     </div>
-    <div class="text-center regCustomRow">
+    <div class="text-center logCustomRow">
         <footer>
             Watermelon Team &copy; Telerik Academy 2014
         </footer>
