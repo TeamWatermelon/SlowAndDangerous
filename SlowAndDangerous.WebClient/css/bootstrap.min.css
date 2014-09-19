@@ -1649,9 +1649,9 @@ pre {
 .studHrRow {
     margin-right: -15px;
     margin-left: -15px;
-    margin-top: 160px;
+    margin-top: 130px;
     position: relative;
-    top: 40%;
+    top: 35%;
 }
 .regHrRow {
     padding-right: 15px;
@@ -1697,7 +1697,22 @@ pre {
     position: relative;
     top: 8%;
 }
-
+.appsRow {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: 160px;
+    margin-left: 160px;
+    position: relative;
+    top: 12%;
+}
+.appsCustomRow {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: 160px;
+    margin-left: 160px;
+    position: relative;
+    top: 12%;
+}
 .logCustomRow {
     padding-right: 15px;
     padding-left: 15px;

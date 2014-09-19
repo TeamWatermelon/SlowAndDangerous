@@ -141,6 +141,7 @@
     <Content Include="imgs\driving-school.jpg" />
     <Content Include="imgs\driving-student.jpg" />
     <Content Include="instructorPage.html" />
+    <Content Include="instructorsInfo.html" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="libs\mustache.js" />
