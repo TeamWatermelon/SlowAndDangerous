@@ -20,6 +20,17 @@
 
         public virtual User Instructor { get; set; }
 
-        public virtual ICollection<User> Students { get; set; }
+        public virtual ICollection<User> Students
+        {
+            get
+            {
+                return this.students;
+            }
+
+            set
+            {
+                this.students = value;
+            }
+        }
     }
 }

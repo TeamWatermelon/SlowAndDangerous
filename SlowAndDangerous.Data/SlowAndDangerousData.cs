@@ -21,6 +21,14 @@
             this.repositories = new Dictionary<Type, object>();
         }
 
+        public IRepository<Appointment> Appointments
+        {
+            get
+            {
+                return this.GetRepository<Appointment>();
+            }
+        }
+
         public IRepository<Car> Cars
         {
             get
@@ -42,14 +50,6 @@
             get
             {
                 return this.GetRepository<User>();
-            }
-        }
-
-        public IRepository<Appointment> Appointments
-        {
-            get
-            {
-                return this.GetRepository<Appointment>();
             }
         }
 
