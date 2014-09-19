@@ -186,7 +186,9 @@
     <Content Include="scripts\renderer.js" />
     <Content Include="scripts\user-controller.js" />
     <Content Include="StudentPage.html" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
