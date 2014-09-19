@@ -1,14 +1,18 @@
 ﻿namespace SlowAndDangerous.WebAPI.Controllers
 {
-    using SlowAndDangerous.Data;
-    using SlowAndDangerous.Models;
-    using SlowAndDangerous.WebAPI.Models;
     using System;
     using System.Collections.Generic;
     using System.Linq;
     using System.Web;
     using System.Web.Http;
+    using System.Web.Http.Cors;
 
+    using SlowAndDangerous.Data;
+    using SlowAndDangerous.Models;
+    using SlowAndDangerous.WebAPI.Models;
+
+    [Authorize]
+    [EnableCors("*", "*", "*")]
     public class CarsController : ApiController
     {
         private ISlowAndDangerousData data;

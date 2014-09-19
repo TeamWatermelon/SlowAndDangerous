@@ -2,11 +2,14 @@
 {
     using System.Linq;
     using System.Web.Http;
+    using System.Web.Http.Cors;
 
     using SlowAndDangerous.Data;
     using SlowAndDangerous.WebAPI.Models;
     using SlowAndDangerous.Models;
 
+    [Authorize]
+    [EnableCors("*", "*", "*")]
     public class AppointmentsController : ApiController
     {
         private ISlowAndDangerousData data;
@@ -85,5 +88,6 @@
 
             return this.Ok(model);
         }
+
     }
 }

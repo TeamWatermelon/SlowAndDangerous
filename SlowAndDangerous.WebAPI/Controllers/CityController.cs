@@ -2,12 +2,14 @@
 {
     using System.Linq;
     using System.Web.Http;
+    using System.Web.Http.Cors;
 
     using Models;
     using SlowAndDangerous.Data;
     using SlowAndDangerous.Models;
 
     [Authorize]
+    [EnableCors("*", "*", "*")]
     public class CityController : ApiController
     {
         private ISlowAndDangerousData data;
