@@ -55,7 +55,7 @@
                 </div>
                 <div class="form-group">
                     <div class="col-lg-8 col-lg-offset-4">
-                        <button type="submit" class="btn btn-primary">Login</button>
+                        <button id="submit" class="">Login</button>
                     </div>
                 </div>
             </form>
@@ -69,5 +69,40 @@
             Watermelon Team &copy; Telerik Academy 2014
         </footer>
     </div>
+    <script>
+        $('#submit').on('click', function () {
+            var email = $('#inputEmail').val();
+            var password = $('#inputPassword').val();
+
+            $.ajax({
+                type: "POST",
+                url: 'http://localhost:2326/Token',
+                data: {
+                    'grant_type': 'password',
+                    'username': email,
+                    'password': password
+                },
+                headers: {
+                    contentType: 'x-www-form-urlencoded'
+                }
+            }).done(function (data) {
+                    debugger;
+                    console.log(data);
+            }).fail(function (data) {
+                console.log(data);
+                    debugger;
+                });
+
+            //$.post('http://localhost:2326/token', {
+            //    'grant_type': 'password',
+            //    'username': email,
+            //    'password': password
+            //},.success(function (data) {
+            //    debugger;
+            //    console.log(data['access_token']);
+            //    localStorage.setItem('access_token', data['access_token']);
+            //});
+        });
+    </script>
 </body>
 </html>

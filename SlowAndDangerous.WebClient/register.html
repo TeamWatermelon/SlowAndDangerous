@@ -73,7 +73,7 @@
                 <div class="form-group">
                     <div class="col-lg-8 col-lg-offset-4">
                         <button class="btn btn-default">Cancel</button>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button id="submit" class="btn btn-primary">Submit</button>
                     </div>
                 </div>
             </form>
@@ -87,5 +87,24 @@
             Watermelon Team &copy; Telerik Academy 2014
         </footer>
     </div>
+    <script>
+    $('#submit').on('click', function () {
+        var email = $('#inputEmail').val();
+        var firstName = $('#firstname').val();
+        var lastName = $('#lastname').val();
+        var password = $('#inputPassword').val();
+        var confirm = $('#confirmPassword').val();
+
+        $.post('http://localhost:2326/api/account/register', {
+            email: email,
+            password: password,
+            confirmpassword: confirm
+        }).done(function (data) {
+            console.log(data);
+        }).fail(function(data){
+            console.log(data);
+        });
+    });
+    </script>
 </body>
 </html>
